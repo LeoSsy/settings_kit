@@ -1,7 +1,6 @@
 import 'settings_kit_platform_interface.dart';
 
 class IOSSettingsKit extends SettingsKitPlatform {
-
   /// Open iOS settings
   Future<bool?> system() async {
     return postMessage<bool?>(action: 'App-prefs:');

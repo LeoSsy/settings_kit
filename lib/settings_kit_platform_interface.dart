@@ -34,4 +34,13 @@ abstract class SettingsKitPlatform extends PlatformInterface {
     T? res = await methodChannel.invokeMethod<T>(_settingMethodName, action);
     return res;
   }
+
+  /// 自定义跳转参数
+  /// Open Android and ios settings by custom action
+  /// android action example :  android.settings.SETTINGS. more action view :https://developer.android.com/reference/android/provider/Settings
+  /// ios action example     :  App-prefs:ACCESSIBILITY    more prefs view  : https://gist.github.com/deanlyoung/368e274945a6929e0ea77c4eca345560
+  /// returns operation successful or failure.
+  Future<bool?> customAction(String action) {
+    return postMessage<bool?>(action: action);
+  }
 }

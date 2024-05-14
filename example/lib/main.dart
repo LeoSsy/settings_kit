@@ -94,6 +94,22 @@ class _MyAppState extends State<MyApp> {
                     ),
                   ),
                 ),
+                TextButton(
+                  onPressed: () {
+                    if (Platform.isAndroid) {
+                      SettingsKit.androidSettings.customAction('android.settings.APP_SEARCH_SETTINGS');
+                    } else if (Platform.isIOS) {
+                      SettingsKit.iosSettings.customAction('App-prefs:ACCESSIBILITY');
+                    }
+                  },
+                  child: Text(
+                    'custom action',
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

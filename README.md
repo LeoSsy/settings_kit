@@ -2,9 +2,22 @@
 
 A comprehensive Flutter plugin to seamlessly navigate to various settings screens on both iOS and Android devices, ensuring compatibility with the latest versions of both platforms.
 
-## 🚀 Usage
+## Getting Started 
 
-To integrate `settings_kit` into your project, add it as a dependency in your `pubspec.yaml` file.
+```dart
+
+dependencies:
+		settings_kit: ^1.0.1
+
+```
+
+# 🚀 Usage
+
+Add this to your package's `pubspec.yaml` file:
+
+```dart
+import 'package:settings_kit/settings_kit.dart';
+```
 
 ```dart
 import 'package:flutter/material.dart';
@@ -83,6 +96,22 @@ void main() => runApp(MaterialApp(
                     ),
                   ),
                 ),
+                TextButton(
+                  onPressed: () {
+                    if (Platform.isAndroid) {
+                      SettingsKit.androidSettings.customAction('android.settings.APP_SEARCH_SETTINGS');
+                    } else if (Platform.isIOS) {
+                      SettingsKit.iosSettings.customAction('App-prefs:ACCESSIBILITY');
+                    }
+                  },
+                  child: Text(
+                    'custom action',
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -149,6 +178,7 @@ Navigate directly to:
 - Manage External Sources
 - Manage unknown app sources 
 - Manage Overlay
+- custom Action
 ... and more features being added regularly!
 
 ### iOS:
@@ -192,6 +222,7 @@ Navigate directly to:
 - Storage & Backup
 - Siri
 - Sounds & Haptics
+- custom Action
 ... and more features being added regularly!
 
 ## 🙏 Acknowledgments
