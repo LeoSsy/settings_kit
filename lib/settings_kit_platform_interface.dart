@@ -30,18 +30,8 @@ abstract class SettingsKitPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
-  }
-
-
-  Future<T?> postMessage<T>({String? methodName, String? action}) async {
-    T? res;
-    if (methodName != null) {
-      res = await methodChannel.invokeMethod<T>(methodName, action);
-    } else {
-      res = await methodChannel.invokeMethod<T>(_settingMethodName,action);
-    }
+  Future<T?> postMessage<T>({String? action}) async {
+    T? res = await methodChannel.invokeMethod<T>(_settingMethodName, action);
     return res;
   }
 }

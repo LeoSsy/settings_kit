@@ -196,16 +196,20 @@ Navigate directly to:
 
 ## 🙏 Acknowledgments
 
-This package was innovatively crafted by [Yann Cabral](http://www.baidu.com). It was inspired by the fantastic work of [Ali Hoseinpoor](https://github.com/AliHoseinpoor/open_settings), aiming to overcome certain limitations.
+This package refrence  [open_settings_plus](https://github.com/yanncabral/open_settings_plus) implementation then My Project added new featured of part.
+
+This package git repository is [settings_kit](https://github.com/LeoSsy/settings_kit).
 
 ## 🐞 Bugs or Feature Requests
 
 Encountered an issue or have a feature in mind? We'd love to hear from you!
 
-- Report issues or seek features [here](https://github.com/yanncabral/open_settings_plus/issues/new).
+- Report issues or seek features [here](https://github.com/LeoSsy/settings_kit/issues/new).
 - Contributions via pull requests are always welcome!
 
 ---
 
 This revised README provides a more structured and polished presentation of the plugin's features and usage.
+
+
 

@@ -1,11 +1,7 @@
 import 'settings_kit_platform_interface.dart';
 
 class AndroidSettingsKit extends SettingsKitPlatform {
-  @override
-  Future<String?> getPlatformVersion() {
-    return postMessage<String?>(methodName: 'getPlatformVersion');
-  }
-
+  
   /// 系统设置
   /// Open Android settings in `System Settings` section.
   /// returns operation successful or failure.

@@ -1,10 +1,6 @@
 import 'settings_kit_platform_interface.dart';
 
 class IOSSettingsKit extends SettingsKitPlatform {
-  @override
-  Future<String?> getPlatformVersion() {
-    return postMessage<String?>(methodName: 'getPlatformVersion');
-  }
 
   /// Open iOS settings
   Future<bool?> system() async {
