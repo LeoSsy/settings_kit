@@ -1,6 +1,6 @@
 name: settings_kit
 description: The package for open various settings screen, covering newer versions of ios and android.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/LeoSsy/settings_kit
 
 environment:
